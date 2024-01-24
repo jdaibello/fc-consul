@@ -13,6 +13,8 @@
 
 1. `ifconfig` -> eth0 inet address
 2. `consul agent -bind=<IP_ADDRESS> -data-dir=/var/lib/consul -config-dir=/etc/consul.d`
+    - The `retry-join` command can be used to auto join the container in the cluster, using an IP address from other container e.g.
+    `consul agent -bind=<IP_ADDRESS> -data-dir=/var/lib/consul -config-dir=/etc/consul.d -retry-join=<OTHER_IP>`
 3. `consul members`
 4. `consul join <SERVER_IP>`
 5. `consul reload` after creating a service schema

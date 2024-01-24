@@ -15,3 +15,6 @@
 2. `consul agent -bind=<IP_ADDRESS> -data-dir=/var/lib/consul -config-dir=/etc/consul.d`
 3. `consul members`
 4. `consul join <SERVER_IP>`
+5. `consul reload` after creating a service schema
+6. `apk -U add bind-tools`
+7. `dig @localhost -p 8600 nginx.service.consul`

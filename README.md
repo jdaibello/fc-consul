@@ -2,16 +2,16 @@
 
 ## Run consul server
 
-`ifconfig` -> eth0 inet address
-`mkdir /etc/consul.d`
-`mkdir /var/lib/consul`
-`consul agent -server -bootstrap-expect=3 -node=<CONTAINER_NAME> -bind=<IP_ADDRESS> -data-dir=/var/lib/consul -config-dir=/etc/consul.d`
-`consul members`
-`consul join <OTHER_SERVER_IP>`
+1. `ifconfig` -> eth0 inet address
+2. `mkdir /etc/consul.d`
+3. `mkdir /var/lib/consul`
+4. `consul agent -server -bootstrap-expect=3 -node=<CONTAINER_NAME> -bind=<IP_ADDRESS> -data-dir=/var/lib/consul -config-dir=/etc/consul.d`
+5. `consul members`
+6. `consul join <OTHER_SERVER_IP>`
 
 ## Run consul client
 
-`ifconfig` -> eth0 inet address
-`consul agent -bind=<IP_ADDRESS> -data-dir=/var/lib/consul -config-dir=/etc/consul.d`
-`consul members`
-`consul join <SERVER_IP>`
+1. `ifconfig` -> eth0 inet address
+2. `consul agent -bind=<IP_ADDRESS> -data-dir=/var/lib/consul -config-dir=/etc/consul.d`
+3. `consul members`
+4. `consul join <SERVER_IP>`

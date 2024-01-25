@@ -60,3 +60,7 @@
 ## Sync servers via file
 
 1. `consul agent -config-dir=/etc/consul.d`
+
+## Genereate cryptograph key
+
+1. `consul keygen`

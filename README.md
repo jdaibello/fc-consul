@@ -20,3 +20,39 @@
 5. `consul reload` after creating a service schema
 6. `apk -U add bind-tools`
 7. `dig @localhost -p 8600 nginx.service.consul`
+
+### Install nginx
+
+1. `apk add nginx`
+2. `nginx`
+3. `apk add vim`
+4. `mkdir /usr/share/nginx/html -p`
+5. `vim /etc/nginx/http.d/default.conf`
+6. Change content to:
+
+    ``` conf
+        # This is a default site configuration which will simply return 404, preventing
+        # chance access to any other virtualhost.
+
+        server {
+            listen 80 default_server;
+            listen [::]:80 default_server;
+
+            root /usr/share/nginx/html;
+
+            # You may need this to prevent return 404 recursion.
+            location = /404.html {
+                internal;
+            }
+        }
+   ```
+
+7. `vim /usr/share/nginx/html/index.html`
+8. Change content to:
+
+    ``` html
+    Hello
+    ```
+
+9. `nginx -s reload`
+10. `curl localhost`

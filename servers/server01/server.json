@@ -1,8 +1,12 @@
 {
     "server": true,
     "bind_addr": "172.26.0.6",
-    "bootstrap_expect": 3,
+    "bootstrap_expect": 1,
     "data_dir": "/tmp",
     "node_name": "consulserver01",
-    "encrypt": "Ljq6aT+LYEoQVEJd9HjvfKSXEIoDDBoe4XtVb4aE6Do="
+    "encrypt": "sdMR9sHJmvkGEMucQxi2DnBCVZUnvMJcKJ5RMT17TYs=",
+    "client_addr": "0.0.0.0",
+    "ui_config": {
+        "enabled": true
+    }
 }

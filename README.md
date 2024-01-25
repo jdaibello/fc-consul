@@ -56,3 +56,7 @@
 
 9. `nginx -s reload`
 10. `curl localhost`
+
+## Sync servers via file
+
+1. `consul agent -config-dir=/etc/consul.d`
